@@ -24,7 +24,7 @@ for (let i = 0; i < songID.length; i++) {
     }
 }
 let singerName = [`the Kid LAROI`, 'Zach B', 'Zach B', 'M.I.A.', 'Seafret', 'Chevy', 'Krishnahazar', 'Chevy',  'Henry Moodie', 'Jake Miller']
-let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'April', 'Mahdi']
+let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Efejawn', 'Hell', 'Efejawn', 'April', 'Efejawn']
 let accent = [`#978e75`, `#c264a6`, '#272571', '#715755', '#564E4B', '#846699', '#AD825D', '#72556B', '#afafaf', '#ffff00']
 
 let jpglink = `https://lets.linkpc.net/icons/`
