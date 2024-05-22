@@ -1,0 +1,412 @@
+:root {
+    --iconAccent: #978E75;
+    --rightSize: 40rem;
+}
+*{
+    font-family: sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(https://lets.linkpc.net/icons/1.jpg);
+    backdrop-filter: blur(3rem) brightness(50%) saturate(20%);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: 0.5s all;
+}
+body:before{
+    content: '';
+    width: 30rem;
+    height: 30rem;
+    border-radius: 100%;
+    filter: blur(5rem);
+    background-color: var(--iconAccent);
+    z-index: -1;
+    position: absolute;
+    top: -10%;
+    left: -3%;
+    opacity: 50%;
+    transition: 0.5s all;
+}
+body:after{
+    content: '';
+    width: 40rem;
+    height: 40rem;
+    border-radius: 100%;
+    filter: blur(5rem);
+    background-color: var(--iconAccent);
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    opacity: 50%;
+    transition: 0.5s all;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+#sectionSliders{
+    display: none;
+}
+button{
+    transition: 0.2s all;
+}
+#leftContainer{
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 25px;
+    color: white;
+}
+#playingInfo{
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2.7rem;
+}
+#playingIcon{
+    border-radius: 30px;
+    width: 27rem;
+    filter: brightness(100%);
+    transition: 0.5s all;
+}
+#playingText{
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+}
+#playingText strong{
+    font-size: 3rem;
+}
+#playingText span{
+    font-size: 2rem;
+}
+#playingControls{
+    width: 100%;
+    justify-content: space-between;
+}
+#playingControls button{
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.301);
+    border-radius: 25px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.buttonOff{
+    display: none;
+}
+#playingSeekBar{
+    font-size: 1.25rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+audio {
+    width: 100%;
+    height: 2rem;
+}
+audio::-webkit-media-controls-panel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+audio::-webkit-media-controls-enclosure {
+    background: none;
+    display: flex;
+    align-items: center;
+}
+audio::-webkit-media-controls-mute-button{
+    -webkit-appearance: media-mute-button;
+    display: none;
+}
+audio::-webkit-media-controls-play-button{
+    display: none;
+}
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display{
+    -webkit-appearance: media-current-time-display;
+    -webkit-user-select: none;
+    flex: none;
+    display: flex;
+    font-size: 1rem;
+    color: white;
+    text-shadow: none;
+    position: absolute;
+    z-index: 2;
+}
+audio::-webkit-media-controls-current-time-display{
+    left: 0;
+}
+audio::-webkit-media-controls-time-remaining-display{
+    /* position: absolute; */
+    right: 0;
+}
+audio::-webkit-media-controls-timeline{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    min-width: 75%;
+    border-radius: 10px;
+    margin-left: 1.5rem;
+}
+audio::-webkit-media-controls-volume-slider{
+    display: none;
+}
+audio::-webkit-media-controls-fullscreen-button{
+    -webkit-appearance: media-enter-fullscreen-button;
+    display: none;
+}
+audio::-webkit-media-controls-toggle-closed-captions-button {
+    display: none;
+}
+audio::-webkit-media-controls-fullscreen-volume-slider{
+    display: none;
+}
+audio::-webkit-media-controls-fullscreen-volume-min-button{
+    display: none;
+}
+audio::-webkit-media-controls-fullscreen-volume-max-button{
+    display: none;
+}
+#rightContainer{
+    width: var(--rightSize);
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+}
+#rcont{
+    width: calc(var(--rightSize)*3);
+    opacity: 90%;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s all;
+}
+.rcontmain{
+    width: var(--rightSize);
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 25px;
+    color: white;
+    overflow: hidden;
+}
+.songAlbum{
+    justify-content: space-between;
+    gap: 1rem;
+}
+#songList,.songItem,.songText{
+    width: 100%;
+}
+#songList{
+    gap: 0.5rem;
+}
+.songItem{
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 5px;
+    padding: 0.2rem;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.songNow{
+    background-color: var(--iconAccent);
+}
+.songItem:hover{
+    background-color: var(--iconAccent);
+}
+.songText{
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+.songAvatar{
+    width: 5em;
+    border-radius: 5px 0 0 5px;
+    filter: saturate(50%);
+}
+.songUp{
+    justify-content: space-between;
+}
+.songID,.songUploader{
+    padding-right: 0.4rem;
+}
+.songVert{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+
+#uploadForm{
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
+label{
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+input{
+    background: var(--iconAccent);
+    border: none;
+    height: 1.5rem;
+    width: 15rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 0.3rem;
+    color: white;
+}
+input::placeholder{
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+label[for="avatarIP"],label[for="accentIP"]{
+    background-color: var(--iconAccent);
+    border-radius: 10px;
+    padding: 0.3rem;
+    height: 1.5rem;
+    width: 15rem;
+    font-size: 1rem;
+}
+input[type="file"], input[type="color"]{
+    display: none;
+}
+input[type="submit"],input[type="button"]{
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    display: none;
+}
+
+#buttons{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#buttons button{
+    background-color: rgba(0, 0, 0, 0.39);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: var(--iconAccent);
+}
+#buttons button:hover,#playingControls button:hover{
+    background-color: rgba(0, 0, 0, 0.568);
+}
+
+@media (max-width:1920px){}
+@media (max-width:520px) {
+    :root{
+        --rightSize: 20rem;
+    }
+    body{
+        flex-direction: row;
+        overflow: hidden;
+        height: 100svh;
+        justify-content: center;
+    }
+    body:before{
+        width: 15rem;
+        height: 15rem;
+        filter: blur(3rem);
+        top: -10%;
+        left: -10%;
+    }
+    body:after{
+        width: 15rem;
+        height: 15rem;
+        filter: blur(2rem);
+        bottom: -10%;
+    }
+    #playingInfo{
+        padding: 1.5rem;
+    }
+    #playingIcon{
+        width: 15rem;
+    }
+    #playingText strong{
+        font-size: 2rem;
+    }
+    #playingText span{
+        font-size: 1rem;
+    }
+    #playingControls button{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display{
+        font-size: 0.75rem;
+    }
+    audio::-webkit-media-controls-timeline{
+        margin-left: 1.8rem;
+    }
+    #sectionSliders{
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
+    #sectionSliders button{
+        width: 100%;
+        height: 4.5rem;
+        font-size: 3rem;
+        /* border: none; */
+        color: var(--iconAccent);
+        background-color: rgba(0, 0, 0, 0.39);
+    }
+    #sectionOne{
+        border-bottom-left-radius: 20px;
+        border: none;
+        border-right: 1px #00000028 solid;
+    }
+    #sectionTwo{
+        border-bottom-right-radius: 20px;
+        border: none;
+        border-left: 1px #00000028 solid;
+    }
+    #leftContainer{
+        width: 18rem;
+        position: absolute;
+    }
+    #buttons,#rightContainer{
+        width: 0;
+    }
+    #rightContainer,#leftContainer,#buttons{
+        transition: 1s all;
+        overflow: hidden;
+    }
+}
