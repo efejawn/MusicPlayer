@@ -1,6 +1,5 @@
 :root {
     --iconAccent: #978E75;
-    --rightSize: 40rem;
 }
 *{
     font-family: sans-serif;
@@ -9,16 +8,15 @@ body{
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0;
-    justify-content: space-evenly;
-    align-items: center;
     background-image: url(https://lets.linkpc.net/icons/1.jpg);
     backdrop-filter: blur(3rem) brightness(50%) saturate(20%);
     background-size: cover;
     background-position: center;
     position: relative;
     transition: 0.5s all;
+    overflow: hidden;
 }
 body:before{
     content: '';
@@ -47,6 +45,17 @@ body:after{
     opacity: 50%;
     transition: 0.5s all;
 }
+#sectionOne{
+    display: none;
+}
+#bodyContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
 .row{
     display: flex;
     flex-direction: row;
@@ -55,33 +64,32 @@ body:after{
     display: flex;
     flex-direction: column;
 }
-#sectionSliders{
-    display: none;
-}
-button{
-    transition: 0.2s all;
-}
 #leftContainer{
     background-color: rgba(0, 0, 0, 0.39);
-    border-radius: 25px;
+    height: 100%;
+    justify-content: center;
     color: white;
 }
 #playingInfo{
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
+    height: 100%;
+    position: relative;
     padding: 2.7rem;
 }
 #playingIcon{
     border-radius: 30px;
     width: 27rem;
     filter: brightness(100%);
-    transition: 0.5s all;
+    transition: 0.1s all, 0.5s transform;
 }
 #playingText{
     align-items: start;
     justify-content: center;
     width: 100%;
+    height: 5rem;
+    transition: 1s all;
 }
 #playingText strong{
     font-size: 3rem;
@@ -89,31 +97,84 @@ button{
 #playingText span{
     font-size: 2rem;
 }
+#ptSinger, #ptTitle{
+    transition: 0.5s all;
+}
+.fade1{
+    animation: fade1 0.3s forwards;
+}
+@keyframes fade1 {
+    0%{
+        color: var(--iconAccent);
+    }
+    50%{
+        margin-right: 2rem;
+        font-size: 2rem;
+        opacity: 0%;
+        color: var(--iconAccent);
+    }
+    90%{
+        color: var(--iconAccent);
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.fade2{
+    animation: fade2 0.3s forwards;
+}
+@keyframes fade2 {
+    0%{
+        color: var(--iconAccent);
+    }
+    50%{
+        margin-right: 0.5rem;
+        font-size: 1.4rem;
+        opacity: 0%;
+        color: var(--iconAccent);
+    }
+    90%{
+        color: var(--iconAccent);
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+#audioDiv{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 #playingControls{
     width: 100%;
     justify-content: space-between;
+    border-radius: 25px;
 }
-#playingControls button{
-    width: 4rem;
+#playingControls button,#sectionOne{
+    width: 100%;
     height: 4rem;
     border: none;
-    background-color: rgba(0, 0, 0, 0.301);
-    border-radius: 25px;
+    background: none;
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
 }
-.buttonOff{
-    display: none;
+button{
+    transition: 0.2s all;
+}
+#playingControls button:hover,#sectionOne:hover{
+    background-color: rgba(0, 0, 0, 0.568);
+    color: var(--iconAccent);
 }
 #playingSeekBar{
     font-size: 1.25rem;
-    width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: space-between;
 }
-
-
 audio {
     width: 100%;
     height: 2rem;
@@ -131,9 +192,6 @@ audio::-webkit-media-controls-enclosure {
 }
 audio::-webkit-media-controls-mute-button{
     -webkit-appearance: media-mute-button;
-    display: none;
-}
-audio::-webkit-media-controls-play-button{
     display: none;
 }
 audio::-webkit-media-controls-current-time-display,
@@ -163,63 +221,56 @@ audio::-webkit-media-controls-timeline{
     border-radius: 10px;
     margin-left: 1.5rem;
 }
-audio::-webkit-media-controls-volume-slider{
-    display: none;
-}
 audio::-webkit-media-controls-fullscreen-button{
     -webkit-appearance: media-enter-fullscreen-button;
     display: none;
 }
-audio::-webkit-media-controls-toggle-closed-captions-button {
+audio::-webkit-media-controls-play-button,audio::-webkit-media-controls-volume-slider,audio::-webkit-media-controls-toggle-closed-captions-button,audio::-webkit-media-controls-fullscreen-volume-slider,audio::-webkit-media-controls-fullscreen-volume-min-button,audio::-webkit-media-controls-fullscreen-volume-max-button{
     display: none;
-}
-audio::-webkit-media-controls-fullscreen-volume-slider{
-    display: none;
-}
-audio::-webkit-media-controls-fullscreen-volume-min-button{
-    display: none;
-}
-audio::-webkit-media-controls-fullscreen-volume-max-button{
-    display: none;
-}
-#rightContainer{
-    width: var(--rightSize);
-    align-items: start;
-    justify-content: center;
-    overflow: hidden;
 }
 #rcont{
-    width: calc(var(--rightSize)*3);
-    opacity: 90%;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    justify-content: start;
     transition: 0.5s all;
 }
 .rcontmain{
-    width: var(--rightSize);
-    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.39);
-    border-radius: 25px;
     color: white;
     overflow: hidden;
 }
 .songAlbum{
-    justify-content: space-between;
-    gap: 1rem;
-}
-#songList,.songItem,.songText{
     width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: start;
 }
 #songList{
+    font-size: 5rem;
+    width: 100%;
     gap: 0.5rem;
+    padding: 1rem;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    align-items: center;
+    height: 100%;
+}
+#songList button{
+    font-size: 5rem;
+}
+#songList::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
 .songItem{
     gap: 0.5rem;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.39);
     border-radius: 5px;
     padding: 0.2rem;
     transition: 0.3s all;
     cursor: pointer;
+    scroll-snap-align: start;
 }
 .songNow{
     background-color: var(--iconAccent);
@@ -227,12 +278,16 @@ audio::-webkit-media-controls-fullscreen-volume-max-button{
 .songItem:hover{
     background-color: var(--iconAccent);
 }
-.songText{
-    justify-content: space-around;
+.songText, .songText div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-size: 1.2rem;
 }
 .songAvatar{
-    width: 5em;
+    width: 5rem;
+    height: 5rem;
     border-radius: 5px 0 0 5px;
     filter: saturate(50%);
 }
@@ -245,95 +300,19 @@ audio::-webkit-media-controls-fullscreen-volume-max-button{
 .songVert{
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    padding: 0.2rem;
+    padding: 0 1rem 0 0;
     text-align: center;
-}
-
-
-#uploadForm{
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    padding: 0.2rem;
-}
-label{
-    font-size: 1.2rem;
-    padding: 0.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-input{
-    background: var(--iconAccent);
-    border: none;
-    height: 1.5rem;
-    width: 15rem;
-    font-size: 1rem;
-    border-radius: 10px;
-    padding: 0.3rem;
-    color: white;
-}
-input::placeholder{
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-}
-label[for="avatarIP"],label[for="accentIP"]{
-    background-color: var(--iconAccent);
-    border-radius: 10px;
-    padding: 0.3rem;
-    height: 1.5rem;
-    width: 15rem;
-    font-size: 1rem;
-}
-input[type="file"], input[type="color"]{
-    display: none;
-}
-input[type="submit"],input[type="button"]{
-    cursor: pointer;
-    width: auto;
-    height: auto;
-    padding: 0.5rem;
-}
-input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
-    display: none;
-}
-
-#buttons{
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#buttons button{
-    background-color: rgba(0, 0, 0, 0.39);
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    color: var(--iconAccent);
-}
-#buttons button:hover,#playingControls button:hover{
-    background-color: rgba(0, 0, 0, 0.568);
+    height: 100%;
 }
 
 @media (max-width:1920px){}
-@media (max-width:520px) {
+@media (max-width:720px) {
     :root{
-        --rightSize: 20rem;
+        --rightSize: 100vw;
     }
     body{
-        flex-direction: row;
-        overflow: hidden;
         height: 100svh;
-        justify-content: center;
+        width: 100svw;
     }
     body:before{
         width: 15rem;
@@ -348,65 +327,98 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
         filter: blur(2rem);
         bottom: -10%;
     }
+    #sectionOne{
+        display: block;
+    }
     #playingInfo{
-        padding: 1.5rem;
+        padding: 0;
+        overflow: visible;
+        flex-direction: row;
     }
     #playingIcon{
-        width: 15rem;
+        width: 75%;
+    }
+    #playingText{
+        display: flex;
+        flex-direction: row;
+        width: 5.5rem;
+        height: 70%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     #playingText strong{
-        font-size: 2rem;
+        font-size: 3rem;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
     }
     #playingText span{
         font-size: 1rem;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    @keyframes fade2 {
+        0%{
+            color: var(--iconAccent);
+        }
+        50%{
+            margin-right: 0.5rem;
+            font-size: 0.4rem;
+            opacity: 0%;
+            color: var(--iconAccent);
+        }
+        90%{
+            color: var(--iconAccent);
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
+    #audioDiv{
+        gap: 0;
+        position: static;
+        background-color: rgba(0, 0, 0, 0.39);
     }
     #playingControls button{
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1rem;
-        border-radius: 10px;
+        height: 6rem;
+        font-size: 1.7rem;
+    }
+    #sectionOne{
+        width: 20%;
+    }
+    #playingSeekBar{
+        width: 100%;
+    }
+    #audioFile{
+        padding: 0 0 0 1rem;
+        width: 75%;
     }
     audio::-webkit-media-controls-current-time-display,
     audio::-webkit-media-controls-time-remaining-display{
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
     audio::-webkit-media-controls-timeline{
         margin-left: 1.8rem;
     }
-    #sectionSliders{
-        position: absolute;
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-    }
-    #sectionSliders button{
-        width: 100%;
-        height: 4.5rem;
-        font-size: 3rem;
-        /* border: none; */
-        color: var(--iconAccent);
-        background-color: rgba(0, 0, 0, 0.39);
-    }
-    #sectionOne{
-        border-bottom-left-radius: 20px;
-        border: none;
-        border-right: 1px #00000028 solid;
-    }
-    #sectionTwo{
-        border-bottom-right-radius: 20px;
-        border: none;
-        border-left: 1px #00000028 solid;
+    .songText, .songText div{
+        font-size: 1rem;
     }
     #leftContainer{
-        width: 18rem;
-        position: absolute;
-    }
-    #buttons,#rightContainer{
-        width: 0;
-    }
-    #rightContainer,#leftContainer,#buttons{
-        transition: 1s all;
+        width: 100vw;
         overflow: hidden;
+    }
+    #rcont{
+        width: 200vw;
+        transition: 0.75s all;
+    }
+    .songAlbum{
+        width: 100vw;
+        padding-top: 1rem;
+    }
+    #songList{
+        height: 95.5%;
+    }
+    .songItem{
+        transform: translateX(50%);
     }
 }
