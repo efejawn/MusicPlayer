@@ -23,8 +23,8 @@ function refresh() {
 
 
 // SONG LIBRARY
-let songID = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-let songFull = ['Thousand Miles', 'Talk To You', 'Hearts', 'Paper Planes', 'Atlantis', 'Sway To My Beat In Cosmos', 'Divine', 'Hope Is the Thing With Feathers', 'Bastille']
+let songID = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+let songFull = ['Thousand Miles', 'Talk To You', 'Hearts', 'Paper Planes', 'Atlantis', 'Sway To My Beat In Cosmos', 'Divine', 'Hope Is the Thing With Feathers', 'Bastille', 'Invasion Metal version']
 let songName = []
 for (let i = 0; i < songID.length; i++) {
     let first = songFull[i]
@@ -36,9 +36,9 @@ for (let i = 0; i < songID.length; i++) {
         songName.push(first)
     }
 }
-let singerName = [`the Kid LAROI`, 'Zach B', 'Zach B', 'M.I.A.', 'Seafret', 'Chevy', 'Krishnahazar', 'Chevy', 'Pompeii']
-let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'Nisa']
-let accent = [`#978E75`, `#c264a6`, '#272571', '#715755', '#564E4B', '#846699', '#AD825D', '#72556B', '#888c91']
+let singerName = [`the Kid LAROI`, 'Zach B', 'Zach B', 'M.I.A.', 'Seafret', 'Chevy', 'Krishnahazar', 'Chevy', 'Pompeii', 'Rocco Miniciello']
+let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'Nisa', 'Arif']
+let accent = [`#978E75`, `#c264a6`, '#272571', '#715755', '#564E4B', '#846699', '#AD825D', '#72556B', '#888c91', #ff0000]
 
 let jpglink = `https://lets.linkpc.net/icons/`
 let avatar = []
