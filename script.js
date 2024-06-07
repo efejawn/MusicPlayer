@@ -23,8 +23,8 @@ function refresh() {
 
 
 // SONG LIBRARY
-let songID = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 11]
-let songFull = ['Thousand Miles', 'Talk To You', 'Hearts', 'Paper Planes', 'Atlantis', 'Sway To My Beat In Cosmos', 'Divine', 'Hope Is the Thing With Feathers', 'Bastille', 'Invasion Metal version', 'Divide my heart']
+let songID = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+let songFull = ['Thousand Miles', 'Talk To You', 'Hearts', 'Paper Planes', 'Atlantis', 'Sway To My Beat In Cosmos', 'Divine', 'Hope Is the Thing With Feathers', 'Bastille', 'Invasion Metal version', 'Divide my heart', 'The Lazy Song']
 let songName = []
 for (let i = 0; i < songID.length; i++) {
     let first = songFull[i]
@@ -36,9 +36,9 @@ for (let i = 0; i < songID.length; i++) {
         songName.push(first)
     }
 }
-let singerName = [`the Kid LAROI`, 'Zach B', 'Zach B', 'M.I.A.', 'Seafret', 'Chevy', 'Krishnahazar', 'Chevy', 'Pompeii', 'Rocco Miniciello', 'Guilty gear']
-let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'Nisa', 'Arif', 'Arif']
-let accent = [`#978E75`, `#c264a6`, '#272571', '#715755', '#564E4B', '#846699', '#AD825D', '#72556B', '#888c91', '#ff0000', '#80532d']
+let singerName = [`the Kid LAROI`, 'Zach B', 'Zach B', 'M.I.A.', 'Seafret', 'Chevy', 'Krishnahazar', 'Chevy', 'Pompeii', 'Rocco Miniciello', 'Guilty gear', 'Bruno Mars']
+let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'Nisa', 'Arif', 'Arif', 'Tiara']
+let accent = [`#978E75`, `#c264a6`, '#272571', '#715755', '#564E4B', '#846699', '#AD825D', '#72556B', '#888c91', '#ff0000', '#80532d', '#FFFFFF']
 
 let jpglink = `https://lets.linkpc.net/icons/`
 let avatar = []
