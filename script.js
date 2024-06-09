@@ -40,12 +40,12 @@ let singerName = [`the Kid LAROI`, 'Zach B', 'Zach B', 'M.I.A.', 'Seafret', 'Che
 let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'Nisa', 'Arif', 'Arif', 'Tiara', 'Mahdi', 'Farel']
 let accent = [`#978E75`, `#c264a6`, '#272571', '#715755', '#564E4B', '#846699', '#AD825D', '#72556B', '#888c91', '#ff0000', '#80532d', '#FFFF00', '#FFC0CB', '#008000']
 
-let jpglink = `https://lets.linkpc.net/icons/`
+let jpglink = `https://lets.linkpc.net/icons2/`
 let avatar = []
 for (let i = 0; i < songID.length; i++) {
     avatar.push(`${jpglink}${songID[i]}.jpg`)
 }
-let mp3link = "https://lets.linkpc.net/songs/"
+let mp3link = "https://lets.linkpc.net/songs2/"
 let audio = []
 for (let i = 0; i < songID.length; i++) {
     audio.push(`${mp3link}${songID[i]}.mp3`)
