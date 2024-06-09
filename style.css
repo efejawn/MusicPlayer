@@ -10,7 +10,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-image: url(https://lets.linkpc.net/icons2/1.jpg);
+    background-image: url(https://lets.linkpc.net/icons/1.jpg);
     backdrop-filter: blur(3rem) brightness(50%) saturate(20%);
     background-size: cover;
     background-position: center;
@@ -108,7 +108,7 @@ body:after{
         color: var(--iconAccent);
     }
     50%{
-        margin-right: 2rem;
+        /* margin-right: 2rem; */
         font-size: 2rem;
         opacity: 0%;
         color: var(--iconAccent);
@@ -128,7 +128,7 @@ body:after{
         color: var(--iconAccent);
     }
     50%{
-        margin-right: 0.5rem;
+        /* margin-right: 0.5rem; */
         font-size: 1.4rem;
         opacity: 0%;
         color: var(--iconAccent);
@@ -253,7 +253,8 @@ audio::-webkit-media-controls-play-button,audio::-webkit-media-controls-volume-s
     overflow: scroll;
     scroll-snap-type: y mandatory;
     align-items: center;
-    height: 100%;
+    margin-top: 1%;
+    height: 96%;
 }
 #songList button{
     font-size: 5rem;
@@ -306,7 +307,7 @@ audio::-webkit-media-controls-play-button,audio::-webkit-media-controls-volume-s
 }
 
 @media (max-width:1920px){}
-@media (max-width:720px) {
+@media (max-width:1000px) {
     :root{
         --rightSize: 100vw;
     }
@@ -362,7 +363,7 @@ audio::-webkit-media-controls-play-button,audio::-webkit-media-controls-volume-s
             color: var(--iconAccent);
         }
         50%{
-            margin-right: 0.5rem;
+            /* margin-right: 0.5rem; */
             font-size: 0.4rem;
             opacity: 0%;
             color: var(--iconAccent);
@@ -420,5 +421,8 @@ audio::-webkit-media-controls-play-button,audio::-webkit-media-controls-volume-s
     }
     .songItem{
         transform: translateX(50%);
+    }
+    .songItem:last-child{
+        margin-bottom: 1rem;
     }
 }
