@@ -40,7 +40,7 @@ for (let i = 0; i < songFull.length; i++) {
     }
 }
 let singerName = [`the Kid LAROI`, 'Zach B', 'Zach B', 'M.I.A.', 'Seafret', 'Chevy', 'Krishnahazar', 'Chevy', '前島麻由', 'Bastille', 'Rocco Minichiello', 'Naoki', 'Bruno Mars', 'RJ Pasin', ' RXPOSO99', 'Mc Gw', 'Phonk Killer', 'Dj Brunin XM & Mc Lullu', 'KKOMDA', 'Counting Stars']
-let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'Lunaria', 'Mahdi', 'Mahdi', 'Mahdi', 'Mahdi', 'Wazi', 'Wazi', 'Wazi', 'Wazi', 'Wazi']
+let uploader = [`chipp`, 'chipp', 'chipp', 'Maxi', 'Monkey', 'Mahdi', 'Hell', 'Mahdi', 'Lunaria', 'Nisa', 'Arif', 'Arif', 'Mahdi', 'Wazi', 'Wazi', 'Wazi', 'Wazi', 'Wazi', 'Mahdi', 'Farel']
 let accent = [`#978E75`, `#c264a6`, '#272571', '#715755', '#564E4B', '#846699', '#AD825D', '#72556B', '#6F4C4C', '#5C402B', '#48141B', '#84796A', '#F7D980', '#0B0B0B', '#764C7B', '#1C1C1B', '#232323', '#66747F', '#2AAA8A', '#00A36C']
 
 let jpglink = `https://lets.linkpc.net/icons/`
