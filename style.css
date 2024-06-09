@@ -10,7 +10,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-image: url(https://lets.linkpc.net/icons/1.jpg);
+    background-image: url(https://lets.linkpc.net/icons2/1.jpg);
     backdrop-filter: blur(3rem) brightness(50%) saturate(20%);
     background-size: cover;
     background-position: center;
